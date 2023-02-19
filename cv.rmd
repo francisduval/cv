@@ -8,7 +8,7 @@ params:
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
-    self_contained: false
+    self_contained: true
 ---
 
 ```{r, include=FALSE}
@@ -86,14 +86,14 @@ CV %>% print_language_bars()
 
 
 
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
+<!-- Disclaimer {#disclaimer} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+<!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).  -->
 
-The source code is available [on github.com/nstrayer/cv](https://github.com/francisduval/cv).
+<!-- The source code is available [on github.com/nstrayer/cv](https://github.com/francisduval/cv). -->
 
-Last updated on `r Sys.Date()`.
+<!-- Last updated on `r Sys.Date()`. -->
 
 
 
@@ -109,7 +109,6 @@ CV %<>% print_text_block("intro")
 ```
 
 
-
 Éducation {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
@@ -118,18 +117,12 @@ CV %<>% print_section('education')
 ```
 
 
-
-Research Experience {data-icon=medal}
+Expérience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('research_positions')
+CV %<>% print_section('industry_positions')
 ```
-
-
-
-Expérience {data-icon=suitcase}
---------------------------------------------------------------------------------
 
 ::: aside
 ```{r}
@@ -137,27 +130,57 @@ CV %<>% print_text_block('industy_experience_aside')
 ```
 :::
 
+Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
 ```{r}
-CV %<>% print_section('industry_positions')
+CV %<>% print_section('academic_articles')
 ```
 
-<!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('academic_articles_aside') -->
+<!-- ``` -->
+<!-- ::: -->
 
-Selected Data Science Writing {data-icon=chart-line}
+Conférences {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('teaching_positions')
+```
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('data_science_writing_aside')
+CV %<>% print_text_block('teaching_experience_aside')
 ```
 :::
 
+Prix et bourses {data-icon=medal}
+--------------------------------------------------------------------------------
+
 ```{r}
-CV %<>% print_section('data_science_writings')
+CV %<>% print_section('research_positions')
 ```
+
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('research_positions_aside') -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- Selected Data Science Writing {data-icon=chart-line} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('data_science_writing_aside') -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- CV %<>% print_section('data_science_writings') -->
+<!-- ``` -->
 
 
 
@@ -179,28 +202,3 @@ CV %<>% print_section('data_science_writings')
 <!-- ```{r} -->
 <!-- CV %<>% print_section('by_me_press') -->
 <!-- ``` -->
-
-
-
-Publications {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('academic_articles')
-```
-
-
-Conférences {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('teaching_experience_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('teaching_positions')
-```
-
-
