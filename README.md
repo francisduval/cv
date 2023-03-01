@@ -1,4 +1,3 @@
 # cv
-CV en français
 
-Lien: francisduval.github.io/cv/
+Lien: [francisduval.github.io/cv/](francisduval.github.io/cv/)
